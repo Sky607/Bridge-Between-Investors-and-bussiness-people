@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <title>Bridge Between Investor and Business People</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+    <header>
+        <nav class="navbar">
+            <div class="logo">Home</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investor.html">Investor</a></li>
+                <li><a href="business.html">Business People</a></li>
+                <li><a href="banker.html">Banker</a></li>
+                <li><a href="advisor.html">Advisor</a></li>
+                <li><a href="../pages/login.html">Login</a></li>
+                <li><a href="../pages/register.html">Register</a></li>
+                
+            </ul>
+            <button class="toggle-btn">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to the Bridge Between Investors and Business People</h1>
+            <p>Connect, collaborate, and create opportunities for success!</p>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h2>For Investors</h2>
+                <p>Explore and invest in promising business ideas.</p>
+                <a href="investor.html" class="btn">Explore</a>
+            </div>
+            <div class="feature">
+                <h2>For Business People</h2>
+                <p>Showcase your innovative ideas to potential investors.</p>
+                <a href="business.html" class="btn">Get Started</a>
+            </div>
+            <div class="feature">
+                <h2>For Bankers</h2>
+                <p>Provide loans and financial support to entrepreneurs.</p>
+                <a href="banker.html" class="btn">Learn More</a>
+            </div>
+            <div class="feature">
+                <h2>For Advisors</h2>
+                <p>Offer guidance and solutions for business growth.</p>
+                <a href="advisor.html" class="btn">Advise</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Bridge Between Investor and Business People. All rights reserved.</p>
+    </footer>
+</div>
+<script>
+    // Select the toggle button and navigation links
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const navLinks = document.querySelector('.nav-links');
+  
+  // Add click event to toggle the visibility of navigation links
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  
+    </script>
+</body>
+
+</html>

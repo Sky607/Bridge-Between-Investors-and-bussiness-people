@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+  <title>Investor Dashboard</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/investor.css">
+</head>
+<body>
+  <div class="wrapper">
+  <header>
+    <nav class="navbar">
+      <div class="logo">Investor Dashboard</div>
+        <ul class="nav-links">
+          <li><a class="home" href="index.html">Home</a></li>
+          <button type="submit" id="logout-button">Logout</button>
+        </ul>
+        <button class="toggle-btn">☰</button>
+    </nav>
+  </header>
+  
+  <main>
+    <h2 class="business-proposal">Available Business Proposals</h2>
+    <div id="view-business-proposals">
+    </div>
+    <div id="form">
+      <h2 class="head">Post Investment Proposal</h2>
+      <form id="post-proposal-form">
+        <label for="proposal-title">Proposal Title:</label>
+        <input type="text" id="proposal-title" placeholder="proposal-title" required>
+
+        <label for="proposal-amount">Investment Amount (₹):</label>
+        <input type="number" id="proposal-amount" placeholder="proposal-amount" required>
+
+        <label for="investment-category">Category:</label>
+        <select id="investment-category-option">
+          <option value="">Select a category</option>
+        </select>
+
+        <label for="proposal-description">Description:</label>
+        <textarea id="proposal-description" rows="4" placeholder="proposal-description"></textarea>
+
+        <button class="post-proposal" type="submit">Submit Proposal</button>
+      </form>
+    </div>
+   
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Bridge Between Investor and Business People. All rights reserved.</p>
+</footer>
+</div>
+<script>
+  // Select the toggle button and navigation links
+const toggleBtn = document.querySelector('.toggle-btn');
+const navLinks = document.querySelector('.nav-links');
+
+// Add click event to toggle the visibility of navigation links
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  <script type="module" src="./scripts/investor.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+  <title>Advisor Dashboard</title>
+  <link rel="stylesheet" href="./styles/advisor.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div class="wrapper">
+  <header>
+    <nav class="navbar">
+      <div class="logo">Advisor Dashboard</div>
+        <ul class="nav-links">
+          <li><a  href="index.html">Home</a></li>
+          <button type="submit" id="logout-button">Logout</button>
+        </ul>
+        <button class="toggle-btn">☰</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2 class="queries-head">Queries</h2>
+      <ul id="query-list"></ul>
+    </section>
+
+    <section>
+      <div class="form">
+      <h2 class="head">Post Solutions</h2>
+      <form id="solution-form">
+        <label for="query-id">Query : </label>
+        <select id="query-id">
+          <option value="" disabled selected>Select a Query</option>
+        </select>
+        <label for="solution-text">Description : </label>
+        <textarea id="solution-text" placeholder="Write your solution..." required></textarea>
+        <button class="post-solution" type="submit">Post Solution</button>
+      </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Bridge Between Investor and Business People. All rights reserved.</p>
+</footer>
+</div>
+<script>
+
+const toggleBtn = document.querySelector('.toggle-btn');
+const navLinks = document.querySelector('.nav-links');
+
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  <script src="../firebase_config.js" type="module"></script>
+  <script src="./scripts/advisor.js" type="module"></script>
+</body>
+</html>

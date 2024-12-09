@@ -1,0 +1,161 @@
+/* main.css - Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+  }
+
+.hero {
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.features {
+    display: flex;
+    justify-content:flex-start;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.feature {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 22%;
+    margin:10px;
+}
+
+.feature h2 {
+    margin-bottom: 0.5rem;
+    color: #0056b3;
+}
+
+.feature p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.feature .btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.feature .btn:hover {
+    background-color: #003f7f;
+}
+
+  /* Wrapper to enforce sticky footer */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: blue;
+    color: #fff;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #ffa500;
+  }
+  
+
+  
+  /* Footer */
+  .footer {
+    background:blue;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      position:absolute;
+      top:60px;
+      background:blue;
+      width:100%;
+      left:0;
+      align-items:center;
+      font-size:20px;
+ 
+    }
+  
+    .navbar .nav-links.active {
+      display: flex;
+      
+    }
+    li{
+      margin-bottom:10px;
+    }
+    .navbar .toggle-btn {
+      display: block;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .feature{
+        width:100%
+    }
+  }

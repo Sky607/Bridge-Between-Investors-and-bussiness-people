@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../modules/styles/login.css">
+  <link rel="stylesheet" href="../modules/styles/main.css">
+</head>
+<body>
+  <div class="wrapper">
+  <header>
+    <nav class="navbar">
+      <div class="logo">Login Page</div>
+        <ul class="nav-links">
+          <li><a  href="../modules/index.html">Home</a></li>
+          <li><a  href="register.html">Register</a></li>
+          
+        </ul>
+        <button class="toggle-btn">☰</button>
+    </nav>
+  </header>
+  <div class="form-container">
+    <h1 class="login">Login</h1>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button class="login-button" type="submit">Login</button>
+    </form>
+    <p class="para">Don't have an account? <a href="register.html">Register</a></p>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2024 Bridge Between Investor and Business People. All rights reserved.</p>
+</footer>
+</div>
+<script>
+  // Select the toggle button and navigation links
+const toggleBtn = document.querySelector('.toggle-btn');
+const navLinks = document.querySelector('.nav-links');
+
+// Add click event to toggle the visibility of navigation links
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  <script src="../firebase-config.js" type="module"></script>
+  <script src="../app.js" type="module"></script>
+</body>
+</html>

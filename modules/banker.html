@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+  <title>Banker Dashboard</title>
+  <link rel="stylesheet" href="./styles/banker.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div class="wrapper">
+  <header>
+    <nav class="navbar"> 
+      <div class="logo">Banker Dashboard</div>
+        <ul class="nav-links">
+          <li><a class="home" href="index.html">Home</a></li>
+          <button type="submit" id="logout-button">Logout</button>
+        </ul>
+        <button class="toggle-btn">☰</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="form">
+      <h2 class="head">Post Loan Details</h2>
+      <form id="loan-details-form">
+        <label for="loan-title">Title</label>
+        <input type="text" id="loan-title" placeholder="Loan Title" required />
+        <label for="loan-description">Description</label>
+        <textarea id="loan-description" placeholder="Describe loan terms..." required></textarea>
+        <label for="interest-rate">Interest Rate</label>
+        <input type="number" id="interest-rate" placeholder="Interest Rate (%)" required />
+        <button class="post-loan"type="submit">Post Loan Details</button>
+      </form>
+    </div>
+    </section>
+
+  </main>
+  <footer class="footer"> 
+    <p>&copy; 2024 Bridge Between Investor and Business People. All rights reserved.</p>
+</footer>
+</div>
+<script>
+  // Select the toggle button and navigation links
+const toggleBtn = document.querySelector('.toggle-btn');
+const navLinks = document.querySelector('.nav-links');
+
+// Add click event to toggle the visibility of navigation links
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  <script src="../firebase_config.js" type="module"></script>
+  <script src="./scripts/banker.js" type="module"></script>
+</body>
+</html>
